@@ -109,8 +109,6 @@ body {
 
 
 }
-
-
 .painel-item.discord span,
 .painel-item.tiktok span,
 .painel-item.instagram span {
@@ -125,9 +123,6 @@ body {
   text-shadow: none !important;
   opacity: 1; /* garantir sem transparência */
 }
-
-
-
 .painel-item:hover {
   background: #2a2a2a;
 }
@@ -249,7 +244,6 @@ body {
   letter-spacing: 1px;
   transition: color 0.3s ease;  
 }
-
 
 body {
   background: url('') no-repeat center center fixed;
@@ -448,8 +442,9 @@ progress::-webkit-progress-value {
   }
 
   .painel-item {
-    flex-direction: row;
-    justify-content: space-between;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 14px;
   }
 
   .profile-pic {
