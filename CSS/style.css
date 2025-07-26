@@ -441,10 +441,9 @@ progress::-webkit-progress-value {
     padding: 0 10px;
   }
 
-  .painel-item {
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 14px;
+  .painel-item {  
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .profile-pic {
@@ -492,4 +491,51 @@ progress::-webkit-progress-value {
   .painel-item span {
     font-size: 13px;
   }
+}
+
+
+/*TELA EMBAÇADA*/
+/* Estilo da camada embaçada de clique */
+#blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 2rem;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+}
+
+/* Garantir que o canvas fique atrás */
+#animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Deixar o conteúdo visível sobre o canvas */
+.profile-card {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Exemplo para o corpo */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  font-family: Arial, sans-serif;
 }
